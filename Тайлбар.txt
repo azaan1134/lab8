@@ -1,0 +1,59 @@
+- Frogger нь Road объекттой бөгөөд тухайн Road-ын 
+аль хэсэг нь эзлэгдсэн эсэхийг хадгалдаг.
+
+- Frogger нь position-оор байрлалаа илэрхийлж, 
+урагш эсвэл хойш шилжих боломжтой.
+
+- move() метод нь дараагийн байрлал боломжтой эсэхийг 
+шалгаад, боломжтой бол байрлалыг шинэчилдэг.
+
+- recordMyself() метод нь Records объект руу Frogger-ийн 
+хувийн мэдээллийг бүртгэх үүрэгтэй.
+
+- Road класс нь зөвхөн эзлэгдсэн зайнуудыг 
+хадгалдаг.
+
+1. Feature Envy:
+- isOccupied() болон isValid() методуудад 
+Road-ын getOccupied() массивыг авсны дараа 
+байрлал шалгаж байна.
+- Энэ шалгалтууд Road дотор байх ёстой, учир 
+нь зам эзэмшигдсэн байршлаа өөрөө хянах 
+хэрэгтэй.
+
+2. Large ("God") Class:
+- Frogger класс дотор тоглоомтой огт 
+холбоогүй хувийн мэдээллүүд 
+(firstName, lastName, phoneNumber, гэх мэт) 
+хадгалагдаж байна.
+- Энэ өгөгдөл нь тусдаа класст байх ёстой.
+
+3. Inappropriate Intimacy:
+- Frogger класс Road-ын дотоод өгөгдөлд 
+(boolean[] occupied) хэтэрхий хамааралтай.
+- Road нь өөрийн эзлэгдсэн эсэхийг шалгах 
+методтой байх ёстой.
+
+массивыг буцаах шаардлагагүй
+
+2.
+Long Parameter List (Урт параметрийн жагсаалт):
+Frogger-т хамаарах firstName, lastName, phoneNumber, 
+zipCode, state, gender зэрэг олон параметрүүдийг 
+шууд дамжуулж байгаа нь Long Parameter 
+List анти-паттерн юм.
+
+Энэ нь Frogger-ийн move() болон recordMyself() 
+гэсэн аргуудад харагдах бөгөөд одоо байгаа кодод 
+Frogger объектыд олон талбарууд байхаас гадна, 
+энэ их хэмжээний параметрүүдийг дамжуулах нь 
+төвөгтэй, бүтээмжгүй, өргөтгөхөд хэцүү болгодог
+
+
+java -jar target/flashcard-cli-1.0-SNAPSHOT.jar cars.txt --order worst-first --repetitions 2 --invertCards
+
+
+java -jar target/flashcard-cli-1.0-SNAPSHOT.jar cars.txt
+
+java -jar target/flashcard-cli-1.0-SNAPSHOT.jar
+
